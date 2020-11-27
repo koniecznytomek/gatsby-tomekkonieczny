@@ -22,15 +22,22 @@ module.exports = {
           styles: `src/styles`,
           types: `src/types`,
           work: `src/components/templates/Work`,
-          hooks: `src/hooks`
-        }
-      }
+          hooks: `src/hooks`,
+        },
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `works`,
+        path: `${__dirname}/src/content/works`,
       },
     },
     {
