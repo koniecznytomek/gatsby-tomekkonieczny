@@ -1,0 +1,176 @@
+@import 'styles/config';
+
+main {
+  background: $grey;
+}
+
+.Home {
+  .header {
+    @include grid;
+    grid-column: 1 / -1;
+    min-height: 100vh;
+
+    &__title {
+      grid-row: 1;
+      grid-column: 2 / -1;
+      align-self: end;
+      padding: 25px;
+      @include media(S) {
+        padding: 100px 25px;
+      }
+
+      h1 {
+        @include font-header;
+        color: $black;
+      }
+    }
+
+    &__desc {
+      grid-row: 2;
+      grid-column: 7 / -1;
+      max-width: 400px;
+      padding: 25px;
+      @include media(S) {
+        grid-column: 3 / -1;
+      }
+
+      p {
+        @include font-normal;
+        color: $black;
+      }
+    }
+  }
+}
+
+.Projects {
+  .project {
+    @include grid;
+    min-height: 100vh;
+    padding: 100px 0;
+    @include media(S) {
+      padding: 25px 0;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      grid-row: 1;
+      justify-content: center;
+      z-index: 2;
+      height: 100vh;
+      background: $grey;
+      @include media(M) {
+        height: auto;
+      }
+
+      h2 {
+        @include font-title;
+        padding: 100px;
+        @include media(S) {
+          padding: 25px;
+        }
+
+        a {
+          position: relative;
+          @extend %link;
+        }
+      }
+
+      p {
+        @include font-normal;
+        max-width: 400px;
+        margin-left: 200px;
+        padding-right: 100px;
+        @include media(S) {
+          margin-left: 50px;
+          padding-right: 25px;
+        }
+      }
+
+      .no {
+        @extend %no;
+        margin-left: 200px;
+        @include media(S) {
+          margin-left: 50px;
+        }
+      }
+    }
+
+    .image {
+      grid-row: 1;
+      grid-column: 1 / -1;
+      z-index: 1;
+      transition: all 1s ease-in-out;
+
+      .gatsby-image-wrapper {
+        height: 100vh;
+        @include media(M) {
+          height: 50vh;
+        }
+      }
+    }
+  }
+
+  .project:nth-of-type(odd) {
+    .title {
+      grid-column: 7 / -1;
+      @include media(M) {
+        grid-row: 2;
+        grid-column: 1 / -1;
+      }
+    }
+
+    &:hover > .image {
+      transform: translateX(-20px);
+    }
+  }
+
+  .project:nth-of-type(even) {
+    .title {
+      grid-column: 1 / 7;
+      @include media(M) {
+        grid-row: 2;
+        grid-column: 1 / -1;
+      }
+    }
+
+    &:hover > .image {
+      transform: translateX(20px);
+    }
+  }
+}
+
+.Contact {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+
+    &__socials {
+      ul {
+        display: flex;
+
+        li {
+          margin: 0 10px;
+          cursor: pointer;
+          @include media(S) {
+            svg {
+              width: 50px;
+            }
+          }
+        }
+      }
+    }
+
+    &__mail {
+      padding-bottom: 25px;
+
+      a {
+        position: relative;
+        @include font-title;
+        @extend %link;
+      }
+    }
+  }
+}

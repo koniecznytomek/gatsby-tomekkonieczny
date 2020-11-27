@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat: 100,200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600;700;800;900&display=swap');
+
+$font: 'Barlow', sans-serif;
+
+// Font from static/fonts
+@include font(Graphik-Regular, Graphik-Regular);
+@include font(Graphik-Medium, Graphik-Medium);
+@include font(Circ, Circ);
+@include font(f37, f37);
+
+@mixin font-header() {
+  font-family: 'f37', serif;
+  @include font-size-fluid(320px, 1600px, 30px, 70px);
+}
+
+@mixin font-title() {
+  font-family: 'f37', serif;
+  @include font-size-fluid(320px, 1600px, 20px, 26px);
+}
+
+@mixin font-desc() {
+  font-family: 'f37', serif;
+  @include font-size-fluid(320px, 1600px, 15px, 20px, 1vw);
+}
+
+@mixin font-normal() {
+  font-family: 'Graphik-Regular', serif;
+  font-size: 11px;
+  line-height: 22px;
+}
+
+@mixin font-small() {
+  font-family: 'Graphik-Regular', serif;
+  font-size: 8px;
+  line-height: 16px;
+}

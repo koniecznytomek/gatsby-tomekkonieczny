@@ -1,0 +1,170 @@
+@import 'styles/config';
+
+.burger {
+  svg {
+    display: block;
+    position: fixed;
+    z-index: 200;
+    top: 100px;
+    right: 100px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    mix-blend-mode: difference;
+    fill: none;
+    stroke: #ffffff;
+    @include media(M) {
+      top: 50px;
+      right: 50px;
+    }
+    @include media(S) {
+      top: 40px;
+      right: 40px;
+      width: 40px;
+      height: 40px;
+    }
+
+    &:hover > .burger-line:not(.burger-active) {
+      transition: transform 0.9s cubic-bezier(0.83, 0, 0.17, 1);
+      transform: rotate(-10deg) translateZ(0);
+      transform-origin: 40% 50%;
+    }
+  }
+
+  .burger-circle {
+    stroke-width: 2.2;
+  }
+
+  .burger-line {
+    transition: transform 0.9s cubic-bezier(0.83, 0, 0.17, 1);
+    transform: rotate(0deg) translateZ(0);
+    transform-origin: 40% 50%;
+  }
+
+  .burger-active {
+    transition: transform 0.9s cubic-bezier(0.83, 0, 0.17, 1);
+    transform: rotate(-90deg) translateZ(0);
+  }
+}
+
+.menu {
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100vw;
+  height: 100%;
+  color: $white;
+  background: $black;
+
+  &--default {
+    visibility: hidden;
+    height: 0;
+  }
+
+  &--open {
+    top: 0;
+    height: 100%;
+    transition: all 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+  }
+
+  &--close {
+    bottom: 0;
+    height: 0;
+    transition: all 0.5s cubic-bezier(0.83, 0, 0.17, 1) 0.5s;
+  }
+}
+
+.nav {
+  display: grid;
+  grid-template-rows: 75vh auto;
+  grid-template-columns: repeat(12, 1fr);
+  min-height: 100vh;
+
+  &--open {
+    transition: all 0.9s cubic-bezier(0.83, 0, 0.17, 1) 0.25s;
+    opacity: 1;
+  }
+
+  &--close {
+    transition: all 0.9s ease-out;
+    opacity: 0;
+  }
+
+  &__works {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    align-self: center;
+    justify-self: center;
+
+    nav {
+      text-align: center;
+
+      li {
+        padding: 10px;
+      }
+
+      a {
+        position: relative;
+        z-index: 2;
+        @include font-title;
+        text-decoration: none;
+        color: $white;
+
+        span {
+          position: absolute;
+          left: -50px;
+          @include font-small;
+          letter-spacing: 3px;
+        }
+      }
+    }
+  }
+
+  &__info {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    align-self: center;
+    justify-self: center;
+    text-align: justify;
+    max-width: 400px;
+    @include media(M) {
+      padding: 25px 25px;
+    }
+
+    p {
+      @include font-normal;
+      padding: 25px 0;
+
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+.line {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 0.2;
+  @include media(M) {
+    grid-column: 7 / -1;
+    stroke-width: 0.2;
+  }
+  @include media(S) {
+    display: none;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

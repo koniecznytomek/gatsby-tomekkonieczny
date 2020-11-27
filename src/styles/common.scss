@@ -1,0 +1,31 @@
+%no {
+  @include font-title;
+
+  span:first-child {
+    display: inline-block;
+    font-size: 24px;
+    margin-right: 6px;
+    border-bottom: 1px solid $black;
+  }
+
+  span {
+    font-size: 9px;
+  }
+}
+
+%link {
+  &:after {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    border-bottom: 2px solid $black;
+    width: 15px;
+    height: 2px;
+    display: block;
+    content: '';
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover:after {
+    width: 20px;
+  }
+}
