@@ -10,7 +10,7 @@ const Image = ({ src, ...props }: any) => {
           node {
             fluid(quality: 100, maxWidth: 4000) {
               originalName
-                ...GatsbyImageSharpFluid_noBase64
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }

@@ -11,7 +11,10 @@ const Projects = ({ project }: IProjects) => {
     <>
       <div className="project">
         <div className="title">
-          <div className="no"> <span>{id}</span><span>/ 4</span></div>
+          <div className="no">
+            <span>{id}</span>
+            <span>/ 4</span>
+          </div>
           <h2>
             <Url to={`/work/${slug}`}>{title}</Url>
           </h2>

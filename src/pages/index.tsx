@@ -15,7 +15,7 @@ export default HomePage;
 
 export const pageQuery = graphql`
   query works {
-    allMdx (sort: {fields: frontmatter___id}){
+    allMdx(sort: { fields: frontmatter___id }) {
       edges {
         node {
           id

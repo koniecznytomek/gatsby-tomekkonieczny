@@ -25,4 +25,3 @@ export const Img = ({ src, alt, width }: Props) => {
     </div>
   );
 };
-

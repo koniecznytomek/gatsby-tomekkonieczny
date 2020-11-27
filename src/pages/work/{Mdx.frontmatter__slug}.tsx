@@ -1,26 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Work from '../../components/templates/Work/Work';
-
-interface Data {
-  data: {
-    mdx: {
-      id: string;
-    };
-    allMdx: {
-      edges: {
-        next: {
-          id: string;
-          frontmatter: object;
-        };
-        node: {
-          id: string;
-          frontmatter: object;
-        };
-      }[];
-    };
-  };
-}
+import { Data } from 'types';
 
 const Website = ({ data }: Data) => {
   const counter = data.allMdx.edges.length;

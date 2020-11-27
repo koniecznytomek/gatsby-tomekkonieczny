@@ -33,7 +33,7 @@ const Nav = () => {
         edges {
           node {
             frontmatter {
-            id
+              id
               title
               slug
             }
@@ -152,9 +152,9 @@ const Nav = () => {
           <div className="nav__info">
             <p>
               Hello, my name is Tomek Konieczny. I am a creative developer and graphic designer
-              based in Cracow / Poland. My main passion is the fully understood JAMstack but i'm not
-              limited to that. In my work I try to combine the simplicity of the graphic design with
-              the clean structure of the code and software architecture.
+              based in Cracow / Poland. My main passion is the fully understood JAMstack but i am
+              not limited to that. In my work I try to combine the simplicity of the graphic design
+              with the clean structure of the code and software architecture.
             </p>
             <p>
               I am also a big fan of old programming languages and retro computers. Years ago, I
@@ -163,8 +163,8 @@ const Nav = () => {
             </p>
             <p>
               Currently I spend some time exploring the secrets of machine learning and
-              experimenting with my Raspberry Pi microcomputer as backend server.
-              If You want to hire me or just talk send me message.
+              experimenting with my Raspberry Pi microcomputer as backend server. If You want to
+              hire me or just talk send me message.
             </p>
             <p>
               <a href="mailto:tomek@tomekkonieczny.com">tomek@tomekkonieczny.com</a>

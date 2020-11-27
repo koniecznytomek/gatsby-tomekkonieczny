@@ -14,19 +14,19 @@ const Home = ({ data }: IHome) => {
         <header className="header">
           <div className="header__title">
             <h1>
-              I'm <br /> a Programmer <br />& graphic <br />
+              I&apos;m <br /> a Programmer <br />& graphic <br />
               designer.
             </h1>
           </div>
           <div className="header__desc">
             <p>
               TL;DR <br />
-              I'm working in-studio and remotely on projects for digital, creative and marketing
-              agencies. I create clean, holistically simple and useful design. I’m interested in
-              researching, prototyping, designing, and building practical, purpose-driven digital
-              services. I’m a JAMstack fan. It’s a way of building websites and apps for better
-              performance — lower scaling costs, providing higher security, and offering a better
-              developer experience.
+              I&apos;m working in-studio and remotely on projects for digital, creative and
+              marketing agencies. I create clean, holistically simple and useful design. I’m
+              interested in researching, prototyping, designing, and building practical,
+              purpose-driven digital services. I’m a JAMstack fan. It’s a way of building websites
+              and apps for better performance — lower scaling costs, providing higher security, and
+              offering a better developer experience.
             </p>
           </div>
         </header>
@@ -41,22 +41,22 @@ const Home = ({ data }: IHome) => {
           <div className="footer__socials">
             <ul>
               <li>
-                <a href="http://twitter.com/tomekkoniec" target="_blank">
+                <a href="http://twitter.com/tomekkoniec" target="_blank" rel="noreferrer">
                   <Twitter />
                 </a>
               </li>
               <li>
-                <a href="http://behance.com/tomekkonieczny" target="_blank">
+                <a href="http://behance.com/tomekkonieczny" target="_blank" rel="noreferrer">
                   <Behance />
                 </a>
               </li>
               <li>
-                <a href="http://dribbble.com/tomekkonieczny" target="_blank">
+                <a href="http://dribbble.com/tomekkonieczny" target="_blank" rel="noreferrer">
                   <Dribbble />
                 </a>
               </li>
               <li>
-                <a href="http://github.com/koniecznytomek" target="_blank">
+                <a href="http://github.com/koniecznytomek" target="_blank" rel="noreferrer">
                   <Github />
                 </a>
               </li>

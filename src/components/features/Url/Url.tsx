@@ -9,7 +9,7 @@ interface Url {
   lenght?: number;
 }
 
-export const Url = ({ children, to='/', effect = 'fadeUp', lenght = 0.6 }: Url) => {
+export const Url = ({ children, to = '/', effect = 'fadeUp', lenght = 0.6 }: Url) => {
   const exitTransition = {
     length: lenght,
     zIndex: 1,
@@ -21,11 +21,7 @@ export const Url = ({ children, to='/', effect = 'fadeUp', lenght = 0.6 }: Url) 
     exitTrigger: useCallback(container => {
       container.setAttribute(
         'style',
-        'animation: ' +
-        effect +
-        'Out ' +
-        lenght +
-        's cubic-bezier(0.83, 0, 0.17, 1) forwards;'
+        'animation: ' + effect + 'Out ' + lenght + 's cubic-bezier(0.83, 0, 0.17, 1) forwards;'
       );
     }, []),
   };
@@ -38,11 +34,7 @@ export const Url = ({ children, to='/', effect = 'fadeUp', lenght = 0.6 }: Url) 
     entryTrigger: useCallback(container => {
       container.setAttribute(
         'style',
-        'animation: ' +
-        effect +
-        'In ' +
-        lenght +
-        's cubic-bezier(0.83, 0, 0.17, 1) forwards;'
+        'animation: ' + effect + 'In ' + lenght + 's cubic-bezier(0.83, 0, 0.17, 1) forwards;'
       );
     }, []),
   };

@@ -1,6 +1,6 @@
 import React from 'react';
-import { INode } from 'types/index';
+import { Node } from 'types/index';
 
-const Layout = ({ children }: INode) => <>{children}</>;
+const Layout = ({ children }: Node) => <>{children}</>;
 
 export default Layout;

@@ -9,6 +9,7 @@ interface Props {
 
 export interface Node {
   children: ReactChildren;
+  bg?: string;
 }
 
 export interface Helm {
@@ -18,7 +19,7 @@ export interface Helm {
   article?: string;
 }
 
-export interface frontmatter {
+interface frontmatter {
   id: number;
   title: string;
   slug: string;
@@ -46,18 +47,14 @@ export interface IProjects {
   project: {
     node: {
       frontmatter: frontmatter;
-    }
-  }
+    };
+  };
 }
 
 interface IWork {
   data: {
     mdx: {
-      frontmatter: {
-        id: string;
-        title: string;
-        desc: string;
-      };
+      frontmatter: frontmatter;
       body: any;
     };
   };
@@ -65,5 +62,27 @@ interface IWork {
     slug: string;
     title: string;
   };
-  counter: string;
+  counter: number;
+}
+
+interface Data {
+  data: {
+    mdx: {
+      id: string;
+      frontmatter: frontmatter;
+      body: any;
+    };
+    allMdx: {
+      edges: {
+        next: {
+          id: string;
+          frontmatter: frontmatter;
+        };
+        node: {
+          id: string;
+          frontmatter: frontmatter;
+        };
+      }[];
+    };
+  };
 }
