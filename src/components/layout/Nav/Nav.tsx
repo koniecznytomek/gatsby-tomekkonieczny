@@ -115,7 +115,6 @@ const Nav = () => {
           </svg>
         </span>
       </div>
-
       <div
         className={`menu ${
           toggle === 'open'
@@ -128,6 +127,11 @@ const Nav = () => {
         }`}
       >
         <div className={`nav ${toggle === 'open' ? 'nav--open' : 'nav--close'}`}>
+          <div className="line">
+            <svg className="line-svg">
+              <line x1="0" y1="0%" x2="0%" y2="100%" />
+            </svg>
+          </div>
           <div className="nav__works">
             <nav>
               <ul>
@@ -148,7 +152,6 @@ const Nav = () => {
               </ul>
             </nav>
           </div>
-
           <div className="nav__info">
             <p>
               Hello, my name is Tomek Konieczny. I am a creative developer and graphic designer
@@ -168,6 +171,16 @@ const Nav = () => {
             </p>
             <p>
               <a href="mailto:tomek@tomekkonieczny.com">tomek@tomekkonieczny.com</a>
+            </p>
+          </div>
+          <div className="nav__stack__title">
+            <h2>My tech stack</h2>
+          </div>
+          <div className="nav__stack__tech">
+            <p>
+              <strong>Frontend</strong> Javascript, Typescript, React, Gatsby, Next, Gulp,
+              Wordpressify, SCSS, Styled Components <strong>Backend</strong> Node, Express, Docker, MongoDB, PHP / MySQL
+              <strong>Design</strong> Adobe Illustrator, Adobe Photoshop, Adobe XD, Sketchbook Pro
             </p>
           </div>
         </div>
