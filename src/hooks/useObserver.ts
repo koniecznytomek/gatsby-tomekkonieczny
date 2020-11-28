@@ -1,29 +1,23 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const useObserver = () => {
-  const refs = useRef([]);
+  const [isObserve, setObserve] = useState(false);
+  const refs = useRef<HTMLDivElement[]>([]);
   refs.current = [];
 
-  const addToRefs = (el) => {
-    if (el && !refs.current.includes(el)) {
-      refs.current.push(el);
-    }
+  const addToRefs = (el: HTMLDivElement) => {
+    if (el && !refs.current.includes(el)) refs.current.push(el);
   };
 
   useEffect(() => {
-    if(refs.current[1].dataset.effect === "slide") {
-      console.log('ni ma')
-      refs.current[1].style.opacity = "1";
-    }
-
     const observer = new IntersectionObserver(item => {
+      if (item[0].isIntersecting) setObserve(true);
     });
     observer.observe(refs.current[0]);
 
     return () => observer.disconnect();
-  });
+  }, [isObserve]);
 
-  return { addToRefs };
+  return { addToRefs, isObserve };
 };
-
 export { useObserver };

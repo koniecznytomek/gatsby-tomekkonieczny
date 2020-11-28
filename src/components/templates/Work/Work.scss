@@ -48,9 +48,11 @@
       align-self: center;
       text-align: right;
       @extend %no;
-      margin-left: 200px;
+      padding: 50px;
       @include media(S) {
-        margin-left: 50px;
+        grid-column: 1 / -1;
+        justify-self: center;
+        text-align: center;
       }
     }
   }
@@ -78,9 +80,15 @@
     @include grid;
     grid-column: 1 / -1;
     margin: 50px 0;
+    transition: all 1s ease;
+    transform: translate3d(0, 100px, 0);
 
     &--bg {
       background: $grey;
+    }
+
+    &--inView {
+      transform: translate(0);
     }
   }
 

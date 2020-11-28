@@ -1,9 +1,19 @@
 import React from 'react';
 import { Node, Props } from 'types/index';
 import Image from '../../features/Image/Image';
+import { useObserver } from '../../../hooks/useObserver';
 
 export const Row = ({ children, bg }: Node) => {
-  return <div className={`Work__row ${bg && 'Work__row--bg'}`}>{children}</div>;
+  const { addToRefs, isObserve } = useObserver();
+
+  return (
+    <div
+      className={`Work__row ${bg ? 'Work__row--bg' : ''} ${isObserve ? 'Work__row--inView' : ''}`}
+      ref={addToRefs}
+    >
+      {children}
+    </div>
+  );
 };
 
 export const Col = ({ children, bg }: Node) => {
@@ -21,7 +31,7 @@ export const Desc = ({ children }: Node) => {
 export const Img = ({ src, alt, width }: Props) => {
   return (
     <div className="Work__img">
-      <Image src={src} alt={alt} style={{ maxWidth: width }} />
+      <Image src={src} alt={alt} style={{ maxWidth: width }}/>
     </div>
   );
 };
