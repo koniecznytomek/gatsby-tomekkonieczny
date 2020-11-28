@@ -5,9 +5,9 @@ import { Helm } from 'types/index';
 
 const SEO = ({ title, description, image, article }: Helm) => {
   const { pathname } = useLocation();
-  const siteName = 'Site Name';
-  const siteUrl = 'http://page.com';
-  const twitterUsername = '@name';
+  const siteName = 'Tomek Konieczny - Portfolio';
+  const siteUrl = 'http://tomekkonieczny.com';
+  const twitterUsername = '@tomekkoniec';
 
   const titleTemplate = title + ' - ' + siteName;
   const url = `${siteUrl}${pathname}`;
