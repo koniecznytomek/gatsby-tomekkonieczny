@@ -1,6 +1,6 @@
 // Font from static/fonts
 @include font(Graphik-Regular, Graphik-Regular);
-@include font(Graphik-Medium, Graphik-Medium);
+@include font(Graphik-Semibold, Graphik-Semibold);
 
 @include font(f37, f37);
 
@@ -29,4 +29,19 @@
   font-family: 'Graphik-Regular', serif;
   font-size: 8px;
   line-height: 16px;
+}
+
+@mixin font-tiny() {
+  font-family: 'Graphik-Semibold', serif;
+  font-size: 8px;
+  line-height: 16px;
+  letter-spacing: 0.9px;
+  @include media(S) {
+    font-size: 7px;
+  }
+}
+
+@mixin font-nav() {
+  font-family: 'f37', serif;
+  @include font-size-fluid(320px, 1600px, 20px, 36px);
 }

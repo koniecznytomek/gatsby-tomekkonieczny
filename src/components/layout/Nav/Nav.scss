@@ -78,7 +78,7 @@
 }
 
 .nav {
-  @include grid(2, auto);
+  @include grid(2, (minmax(80vh, auto) auto 100px 200px));
   position: relative;
   min-height: 100vh;
 
@@ -96,27 +96,37 @@
     grid-row: 1;
     grid-column: 1 / 2;
     align-self: center;
-    padding: 50px 0;
+    text-align: right;
+    transform: translateX(3px);
+    background: $black;
 
     nav {
-      position: relative;
-      z-index: 11;
-      text-align: right;
-      transform: translateX(3px);
-      background: $black;
-
       li {
-        padding: 5px 0;
+        padding: 10px 0;
       }
 
       a {
-        @include font-title;
+        @include font-nav;
         color: $white;
 
         span {
           @include font-small;
           font-size: 4px;
           letter-spacing: 3px;
+        }
+      }
+    }
+
+    @include media(M) {
+      grid-column: 1 / -1;
+      text-align: center;
+      nav {
+        li {
+          padding: 15px;
+        }
+
+        span {
+          display: block;
         }
       }
     }
@@ -128,13 +138,8 @@
     align-self: center;
     text-align: justify;
     max-width: 400px;
-    background: $black;
     transform: translateX(-1px);
-    z-index: 11;
-    @include media(M) {
-      grid-column: 1 / -1;
-      justify-self: center;
-    }
+    background: $black;
 
     p {
       @include font-normal;
@@ -144,21 +149,32 @@
         color: $white;
       }
     }
+
+    @include media(M) {
+      grid-column: 1 / -1;
+      justify-self: center;
+      p {
+        padding: 25px;
+      }
+    }
   }
 
   &__stack__title {
     grid-row: 3;
     grid-column: 1 / 2;
     align-self: center;
+    z-index: 11;
     text-align: right;
-    padding: 50px 0;
+    padding: 10px 0;
+    transform: translateX(1px);
+    background: $black;
+    @include media(M) {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
 
     h2 {
       @include font-title;
-      position: relative;
-      background: $black;
-      transform: translateX(1px);
-      z-index: 11;
     }
   }
 
@@ -166,22 +182,28 @@
     grid-row: 4;
     grid-column: 2 / -1;
     align-self: center;
-    transform: translateX(-1px);
-    z-index: 11;
-    padding-bottom: 50px;
     max-width: 400px;
+    padding-bottom: 50px;
+    transform: translateX(-1px);
+
+    p {
+      padding: 25px 0;
+      @include font-normal;
+      background: $black;
+
+      span {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
 
     @include media(M) {
       grid-column: 1 / -1;
       justify-self: center;
-    }
+      text-align: center;
 
-    p {
-      background: $black;
-      @include font-normal;
-      padding: 25px 0;
-      strong {
-        text-transform: uppercase;
+      p {
+        padding: 25px;
       }
     }
   }
@@ -189,7 +211,7 @@
 
 .line {
   position: absolute;
-  z-index: 10;
+  z-index: 0;
   top: 0;
   bottom: 0;
   left: 50%;

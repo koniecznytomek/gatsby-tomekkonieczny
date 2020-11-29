@@ -4,7 +4,7 @@ import './Nav.scss';
 import { Link } from 'gatsby';
 
 const Nav = () => {
-  const [toggle, setToggle] = useState('default');
+  const [toggle, setToggle] = useState('open');
   const [isOpening, setOpening] = useState(false);
   const burger = useRef<HTMLHeadingElement>(null);
 
@@ -178,9 +178,9 @@ const Nav = () => {
           </div>
           <div className="nav__stack__tech">
             <p>
-              <strong>Frontend</strong> Javascript, Typescript, React, Gatsby, Next, Gulp,
-              Wordpressify, SCSS, Styled Components <strong>Backend</strong> Node, Express, Docker, MongoDB, PHP / MySQL
-              <strong>Design</strong> Adobe Illustrator, Adobe Photoshop, Adobe XD, Sketchbook Pro
+              <span>Frontend</span> Javascript, Typescript, React, Gatsby, Next, Gulp, Wordpressify,
+              SCSS, Styled Components <span>Backend</span> Node, Express, Docker, MongoDB, PHP /
+              MySQL <span>Design</span> Adobe Illustrator, Adobe Photoshop, Adobe XD, Sketchbook Pro
             </p>
           </div>
         </div>
