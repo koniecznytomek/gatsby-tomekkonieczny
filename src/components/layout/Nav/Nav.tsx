@@ -4,7 +4,7 @@ import './Nav.scss';
 import { Link } from 'gatsby';
 
 const Nav = () => {
-  const [toggle, setToggle] = useState('open');
+  const [toggle, setToggle] = useState('default');
   const [isOpening, setOpening] = useState(false);
   const burger = useRef<HTMLHeadingElement>(null);
 
