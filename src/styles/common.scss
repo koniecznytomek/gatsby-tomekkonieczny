@@ -25,7 +25,40 @@
     content: '';
     transition: all 0.3s ease-in-out;
   }
+
   &:hover:after {
     width: 20px;
+  }
+}
+
+%side-title {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 113px;
+  z-index: 99;
+  @include media(M) {
+    right: 63px;
+  }
+  @include media(S) {
+    right: 53px;
+  }
+
+  h2 {
+    @include font-tiny;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      bottom: -50px;
+      left: 8px;
+      border-left: 1px solid $black;
+      width: 1px;
+      height: 30px;
+      display: block;
+      content: '';
+    }
   }
 }
