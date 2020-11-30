@@ -140,6 +140,27 @@ main {
   }
 }
 
+.Side {
+  min-height: 50vh;
+  margin: 100px 0;
+
+  ul {
+    display: flex;
+    min-height: 100%;
+
+    li {
+      display: block;
+      min-width: 75vw;
+      margin-right: 50px;
+      object-fit: cover;
+
+      .gatsby-image-wrapper {
+        height: 600px;
+      }
+    }
+  }
+}
+
 .Contact {
   .footer {
     display: flex;
@@ -173,4 +194,8 @@ main {
       }
     }
   }
+}
+
+.side-title {
+  @extend %side-title;
 }

@@ -6,6 +6,7 @@ import Github from '../../../assets/svg/Github';
 import Dribbble from '../../../assets/svg/Dribbble';
 import Behance from '../../../assets/svg/Behance';
 import Twitter from '../../../assets/svg/Twitter';
+import Image from '../../features/Image/Image';
 
 const Home = ({ data }: IHome) => {
   return (
@@ -21,15 +22,17 @@ const Home = ({ data }: IHome) => {
           <div className="header__desc">
             <p>
               TL;DR <br />
-              I&apos;m working in-studio and remotely on projects for digital, creative and
-              marketing agencies. I create clean, holistically simple and useful design. I’m
-              interested in researching, prototyping, designing, and building practical,
-              purpose-driven digital services. I’m a JAMstack fan. It’s a way of building websites
-              and apps for better performance — lower scaling costs, providing higher security, and
-              offering a better developer experience.
+              I&apos;m working remotely on projects and startups for small and medium companies. I
+              create clean, holistically simple and useful design. I’m interested in researching,
+              prototyping, designing, and building practical, purpose-driven digital services. I’m a
+              JAMstack fan. It’s a way of building websites and apps for better performance — lower
+              scaling costs, providing higher security, and offering a better developer experience.
             </p>
           </div>
         </header>
+      </div>
+      <div className="side-title">
+        <h2>recent works</h2>
       </div>
       <div className="Projects">
         {data.allMdx.edges.map((project, i) => (
