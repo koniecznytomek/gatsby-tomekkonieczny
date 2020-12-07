@@ -183,6 +183,18 @@ const Nav = () => {
               MySQL <span>Design</span> Adobe Illustrator, Adobe Photoshop, Adobe XD, Sketchbook Pro
             </p>
           </div>
+          <div className="nav__gatsby">
+            <p>
+              Made in GatsbyJS <br />
+              <a
+                href="https://github.com/koniecznytomek/gatsby-tomekkonieczny"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Source code
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </>

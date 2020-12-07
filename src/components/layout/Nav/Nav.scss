@@ -78,7 +78,7 @@
 }
 
 .nav {
-  @include grid(2, (minmax(80vh, auto) auto 100px 200px));
+  @include grid(2, (minmax(80vh, auto) auto 100px 200px auto));
   position: relative;
   min-height: 100vh;
 
@@ -201,10 +201,26 @@
       grid-column: 1 / -1;
       justify-self: center;
       text-align: center;
-
       p {
         padding: 25px;
       }
+    }
+  }
+
+  &__gatsby {
+    grid-row: 5;
+    grid-column: 1 / -1;
+    z-index: 2;
+    @include font-normal;
+
+    a {
+      color: $white;
+    }
+
+    p {
+      background: $black;
+      text-align: center;
+      padding: 50px;
     }
   }
 }
