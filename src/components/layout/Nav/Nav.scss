@@ -147,6 +147,7 @@
 
       a {
         color: $white;
+        font-weight: bold;
       }
     }
 
@@ -214,6 +215,7 @@
     @include font-normal;
 
     a {
+      font-weight: bold;
       color: $white;
     }
 
