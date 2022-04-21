@@ -43,7 +43,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-172679136-1',
+        trackingId: 'G-TE8HS3V9QV',
         head: true,
         pageTransitionDelay: 1,
         cookieDomain: 'tomekkonieczny.com',
